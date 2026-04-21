@@ -1,12 +1,16 @@
 package lumod;
 
+import lumod.LumodStorage.BaseLumodStorage;
 import lumod.addons.LumodAddon;
 
 class Lumod {
+	@:deprecated('Lumod.cache is deprecated and should be replaced with Lumod.fs')
+	public static var cache:Null<Any> = null;
+
 	/**
-	 * The cache of scripts. Can be changed to your own class but it must extend `lumod.Cache`.
+	 * The FileSystem of getting scripts. Can be changed to your own class but it must extend `lumod.LumodStorage.BaseLumodStorage`.
 	 */
-	public static var cache:Cache = new Cache();
+	public static var storage:BaseLumodStorage = new LumodStorage();
 
 	/**
 	 * Dynamic function that handles the destination path of the script file.

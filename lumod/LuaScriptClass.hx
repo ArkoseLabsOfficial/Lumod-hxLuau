@@ -296,7 +296,7 @@ class LuaScriptClass {
 
 					__scriptPath = lumod.Lumod.scriptPathHandler($v{scriptPath});
 					
-					if (lumod.Lumod.cache.existsScript(__scriptPath)) {
+					if (lumod.Lumod.storage.existsScript(__scriptPath)) {
 						// initialize lua
 						var lua = llua.LuaL.newstate();
 
@@ -373,7 +373,7 @@ class LuaScriptClass {
 						}
 
 						// load the file and execute it
-						llua.LuaL.dostring(lua, lumod.Lumod.cache.getScript(__scriptPath));
+						llua.LuaL.dostring(lua, lumod.Lumod.storage.getScript(__scriptPath));
 					}
 					else if (__scriptPath != null) {
 						Sys.println(__scriptPath + ": Couldn't initialize LUA script for class \"" + $v{className} + "\" please create a new script in '" + __scriptPath + "'.");

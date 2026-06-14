@@ -3,18 +3,18 @@ Framework for modding compiled classes with Lua using Haxe macros and LuaJIT.
 
 ## Setup
 ### Installing
-Install LuaJIT backend using:
+Install Luau using:
 ```
-haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit
+haxelib git hxluau https://github.com/Ajwyunsx/hxluau
 ```
-(or ideally my fork of it) 
+(or ideally ShadowEngineTeam's fork of it) 
 ```
-haxelib git linc_luajit https://github.com/Snirozu/linc_luajit
+haxelib git hxluau https://github.com/ShadowEngineTeam/hxluau
 ```
 
 And then `lumod` using:
 ```
-haxelib install lumod
+haxelib git lumod https://github.com/ArkoseLabsOfficial/Lumod-hxLuau
 ```
 Then you can use `lumod.LuaScriptClass.build("script.lua")` build macro in your project in any class. <br>
 
